@@ -1,16 +1,18 @@
-<!-- layout.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('head') %>
+  <!-- include head.ejs from partials directory -->
+  <%- include('../partials/head') %>
   <body>
     <div class="site-wrapper">
-      <%- include('header') %>
+      <!-- include header.ejs (which itself includes navigation.ejs) -->
+      <%- include('../partials/header') %>
 
       <main>
         <%- body %>
       </main>
 
-      <%- include('footer') %>
+      <!-- include footer.ejs -->
+      <%- include('../partials/footer') %>
     </div>
   </body>
 </html>
