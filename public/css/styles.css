@@ -1,9 +1,7 @@
-/* 1. Box‑Sizing Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* 2. Body & Checkerboard Side‑Borders */
 body {
   margin: 0;
   background-color: #fff;
@@ -17,16 +15,14 @@ body {
   line-height: 1.5;
 }
 
-/* 3. Centered Container + Cyan Outline */
 .page-container {
   max-width: 1024px;
   margin: 0 auto;
-  border: 4px solid #007a85; /* Darker cyan for outline */
+  border: 4px solid #007a85;
   background: #fff;
   padding: 0 2rem;
 }
 
-/* 4. Top Bar (“CSE Motors” + “My Account”) */
 .header-bar {
   display: flex;
   justify-content: space-between;
@@ -45,7 +41,6 @@ body {
   text-decoration: none;
 }
 
-/* 5. Main Navigation */
 .navbar {
   background-color: #232742;
 }
@@ -74,15 +69,13 @@ body {
   border-radius: 4px;
 }
 
-/* 6. Section Divider */
 .section-divider {
   border: none;
   height: 1px;
-  background: #007a85; /* Darker cyan for divider */
+  background: #007a85;
   margin: 1.5rem 0;
 }
 
-/* === Hero === */
 .hero {
   position: relative;
   padding: 2rem 0;
@@ -101,35 +94,35 @@ body {
 
 .hero-text {
   position: absolute;
-  left: 13%; /* Reduced from 33% to 13% (moved 20% to the left) */
-  top: 30%; /* Keep at 30% from the top */
+  left: 13%;
+  top: 30%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.7); /* 70% opacity/transparency */
+  background: rgba(255,255,255,0.7);
   padding: 1.5rem;
   border-radius: 8px;
-  max-width: 125px; /* Keep at 125px (25% larger than original) */
+  max-width: 125px;
   z-index: 2;
 }
 
 .hero-text h1 {
-  font-size: 1.1rem; /* Slightly increased font size */
+  font-size: 1.1rem;
   margin: 0 0 0.3rem;
 }
 
 .hero-text h2 {
-  font-size: 1rem; /* Slightly increased font size */
+  font-size: 1rem;
   margin: 0 0 0.3rem;
 }
 
 .hero-features {
-  font-size: 0.85rem; /* Slightly increased font size */
+  font-size: 0.85rem;
   padding-left: 1rem;
   margin: 0.3rem 0;
 }
 
 .hero-image {
-  width: 60%; /* Keep at 60% of the page width */
-  margin: 0 auto; /* Center the container */
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -137,7 +130,7 @@ body {
 }
 
 .hero-image img {
-  max-width: 175%; /* Increase image size by 75% */
+  max-width: 175%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -145,9 +138,9 @@ body {
 
 .hero-btn {
   display: inline-block;
-  font-size: 0.85rem; /* Slightly increased font size */
-  padding: 0.4rem 0.7rem; /* Slightly increased padding */
-  background-color: #007a85; /* Darker cyan for button */
+  font-size: 0.85rem;
+  padding: 0.4rem 0.7rem;
+  background-color: #007a85;
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -156,7 +149,6 @@ body {
   cursor: pointer;
 }
 
-/* 8. Upgrades & Reviews */
 .reviews-upgrades {
   display: flex;
   flex-direction: column;
@@ -183,16 +175,15 @@ body {
 
 .upgrade-image-link {
   display: block;
-  background-color: #007a85; /* Darker cyan for upgrade boxes */
+  background-color: #007a85;
   border: none;
   border-radius: 4px;
-  padding: 10px; /* Reduced padding to 10px */
+  padding: 10px;
   text-decoration: none;
-  margin: 3px 0; /* Set margin to 3px max above and below */
-  /* Set fixed dimensions to make all boxes uniform */
+  margin: 3px 0;
   width: 100%;
   height: 0;
-  padding-bottom: 100%; /* Create square aspect ratio */
+  padding-bottom: 100%;
   position: relative;
 }
 
@@ -205,7 +196,7 @@ body {
   max-width: 90%;
   max-height: 90%;
   margin: auto;
-  object-fit: contain; /* Maintain aspect ratio while fitting in container */
+  object-fit: contain;
 }
 
 .upgrade-name-link {
@@ -214,12 +205,12 @@ body {
   border: none;
   padding: 0;
   margin-top: 0.5rem;
-  color: blue; /* Standard blue for hyperlinks */
+  color: blue;
 }
 
 .upgrade-name-link span {
   display: block;
-  color: blue; /* Standard blue for hyperlinks */
+  color: blue;
   font-weight: 600;
 }
 .reviews ul {
@@ -229,12 +220,11 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* 9. Desktop Layout Adjustments */
 @media screen and (min-width: 768px) {
   .hero-content {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start; /* top‑align hero items */
+    align-items: flex-start;
   }
   .hero-text {
     max-width: 50%;
@@ -258,33 +248,31 @@ body {
   }
 }
 
-/* Mobile layout for hero */
 @media screen and (max-width: 767px) {
   .hero-content {
-    position: relative; /* Ensure relative positioning for absolute child */
+    position: relative;
     flex-direction: column;
   }
   
   .hero-image {
     width: 100%;
-    order: 1; /* Place image first */
+    order: 1;
   }
   
   .hero-text {
-    position: absolute; /* Keep absolute positioning */
-    left: 10%; /* Position from left */
-    top: 30%; /* Position from top */
+    position: absolute;
+    left: 10%;
+    top: 30%;
     transform: translateY(-50%);
     max-width: 125px;
-    background: rgba(255,255,255,0.8); /* Slightly more opaque for better readability */
+    background: rgba(255,255,255,0.8);
     z-index: 2;
   }
 }
 
-/* Mobile layout for reviews and upgrades */
 @media screen and (max-width: 767px) {
   .reviews-upgrades {
-    flex-direction: column-reverse; /* Reviews above upgrades */
+    flex-direction: column-reverse;
   }
   
   .reviews {
@@ -295,30 +283,4 @@ body {
     margin-top: 2rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
