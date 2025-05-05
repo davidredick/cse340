@@ -1,15 +1,31 @@
-<header>
-    <!-- Top bar: brand + My Account -->
-    <div class="header-bar">
-      <div class="siteName">
-        <a href="/" title="Return to home page">CSE Motors</a>
-      </div>
-      <div id="tools">
-        <a href="/account/login" class="nav-link" title="Click to log in">My Account</a>
-      </div>
+<header class="header-bar">
+    <span class="siteName">
+      <a href="/" title="Return to home page">CSE Motors</a>
+    </span>
+    <div id="tools">
+      <a href="/account/login" title="Click to log in">My Account</a>
     </div>
-  
-    <!-- Main nav row -->
-    <%- include('navigation') %>
   </header>
+  
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link <%= title==='Home'?'active':''%>">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/custom" class="nav-link <%= title==='Custom'?'active':''%>">Custom</a>
+        </li>
+        <li class="nav-item">
+          <a href="/sedan" class="nav-link <%= title==='Sedan'?'active':''%>">Sedan</a>
+        </li>
+        <li class="nav-item">
+          <a href="/suv" class="nav-link <%= title==='SUV'?'active':''%>">SUV</a>
+        </li>
+        <li class="nav-item">
+          <a href="/truck" class="nav-link <%= title==='Truck'?'active':''%>">Truck</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   
